@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minimalist Image Viewer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="light-mode">
+  <div class="container">
+    <div class="content-wrapper">
+      <img id="content-image" src="" alt="Page Image">
+    </div>
+    <p id="caption-text" class="caption"></p>
+    <div class="navigation">
+      <button id="first-btn" class="nav-btn">First</button>
+      <button id="prev-btn" class="nav-btn">Previous</button>
+      <button id="next-btn" class="nav-btn">Next</button>
+      <button id="last-btn" class="nav-btn">Last</button>
+      <button id="theme-toggle" class="nav-btn">Switch to Dark Mode</button>
+    </div>
+    <div class="thumbnail-container">
+        <img src="images/1.png" class="thumbnail" onclick="goToPage(0)">
+        <img src="images/2.png" class="thumbnail" onclick="goToPage(1)">
+        <img src="images/3.png" class="thumbnail" onclick="goToPage(2)">
+        <img src="images/4.png" class="thumbnail" onclick="goToPage(3)">
+        <img src="images/5.png" class="thumbnail" onclick="goToPage(4)">
+        <img src="images/6.png" class="thumbnail" onclick="goToPage(5)">
+        <img src="images/7.png" class="thumbnail" onclick="goToPage(6)">
+        <img src="images/8.png" class="thumbnail" onclick="goToPage(7)">
+        <img src="images/9.png" class="thumbnail" onclick="goToPage(8)">
+        <img src="images/10.png" class="thumbnail" onclick="goToPage(9)">
+        <img src="images/11.png" class="thumbnail" onclick="goToPage(10)">
+        <img src="images/12.png" class="thumbnail" onclick="goToPage(11)">
+        <!-- Add more thumbnails here -->
+      </div>
+      
+    <div class="footer">
+      <p>Made by Santo</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

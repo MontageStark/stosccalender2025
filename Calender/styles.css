@@ -1,0 +1,198 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.light-mode {
+    background-color: #f4f4f4;
+    color: #000;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #fff;
+}
+
+.container {
+    max-width: 100%;
+    margin: 20px auto;
+    background: var(--container-bg, #fff);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+body.light-mode .container {
+    --container-bg: #fff;
+}
+
+body.dark-mode .container {
+    --container-bg: #1e1e1e;
+}
+
+#content-image {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 1s ease, opacity 1s ease;
+    transform-origin: left center;
+}
+
+.caption {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.nav-btn {
+    padding: 10px 15px;
+    margin: 5px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.nav-btn:hover:not(:disabled) {
+    background: #0056b3;
+}
+
+body.dark-mode .nav-btn {
+    background: #444;
+    color: #fff;
+}
+
+body.dark-mode .nav-btn:hover:not(:disabled) {
+    background: #333;
+}
+
+.content-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.navigation {
+    margin-top: 20px;
+}
+
+/* Footer Styles */
+.footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: var(--footer-bg, #f4f4f4);
+}
+
+body.light-mode .footer {
+    --footer-bg: #f4f4f4;
+}
+
+body.dark-mode .footer {
+    --footer-bg: #1e1e1e;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 14px;
+    color: #007bff;
+}
+
+/* Page Turn Animation */
+.page-turn {
+    animation: flipPage 1s forwards;
+}
+
+@keyframes flipPage {
+    0% {
+        transform: scale(1) rotateY(0deg);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1) rotateY(90deg);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1) rotateY(180deg);
+        opacity: 0;
+    }
+}
+
+/* Thumbnail Container */
+.thumbnail-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;  /* Center thumbnails horizontally */
+    flex-wrap: wrap;  /* Allow wrapping on smaller screens */
+    gap: 10px;  /* Space between thumbnails */
+}
+
+.thumbnail {
+    width: 60px;  /* Fixed width for thumbnails */
+    height: 60px;  /* Fixed height for thumbnails */
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+/* Dark mode adjustments for thumbnails */
+body.dark-mode .thumbnail {
+    border: 2px solid #fff;
+}
+
+body.dark-mode .thumbnail:hover {
+    transform: scale(1.1);
+    border-color: #007bff;
+}
+
+/* Adjust the size of the thumbnails on smaller screens */
+@media (max-width: 768px) {
+    .thumbnail {
+        width: 50px;  /* Smaller thumbnails on mobile */
+        height: 50px;
+    }
+}
+
+/* Extra small devices adjustment: Single column on very small screens */
+@media (max-width: 480px) {
+    .thumbnail-container {
+        grid-template-columns: 1fr; /* Single column on mobile */
+    }
+
+    .thumbnail {
+        width: 50px; /* Even smaller size on mobile */
+        height: 50px;
+    }
+}
+
+/* Reverse Page Turn Animation */
+.page-turn-reverse {
+    animation: flipPageReverse 1s forwards;
+}
+
+@keyframes flipPageReverse {
+    0% {
+        transform: scale(1) rotateY(0deg);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1) rotateY(-90deg);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1) rotateY(-180deg);
+        opacity: 0;
+    }
+}
