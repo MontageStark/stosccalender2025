@@ -25,7 +25,7 @@ const images = [
 ];
 
 function updatePage() {
-  document.getElementById('loading').style.display = 'block'; // Show loading indicator 
+  
   preloadImages(); // Preload next/previous images
   // Check if we're moving forward or backward
   const isForward = currentPage > previousPage;
@@ -43,7 +43,7 @@ function updatePage() {
   setTimeout(() => {
     contentImage.src = images[currentPage].src;
     captionText.textContent = images[currentPage].caption;
-    document.getElementById('loading').style.display = 'none'; // Hide loading indicator after the image is loaded
+    
 
     // Reset the animation class after the transition
     contentImage.classList.remove('page-turn', 'page-turn-reverse');
