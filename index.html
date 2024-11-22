@@ -9,7 +9,7 @@
 <body class="light-mode">
   <div class="container">
     <div class="content-wrapper">
-      <img id="content-image" src="" alt="Page Image">
+      <img id="content-image" src="" alt="">
     </div>
     <p id="caption-text" class="caption"></p>
     <div class="navigation">
@@ -20,7 +20,7 @@
       <button id="theme-toggle" class="nav-btn">Switch to Dark Mode</button>
     </div>
     <div class="thumbnail-container">
-        <img src="images/1.png" class="thumbnail" onclick="goToPage(0)">
+      <img data-src="images/1.png" class="thumbnail lazy" onclick="goToPage(0)">
         <img src="images/2.png" class="thumbnail" onclick="goToPage(1)">
         <img src="images/3.png" class="thumbnail" onclick="goToPage(2)">
         <img src="images/4.png" class="thumbnail" onclick="goToPage(3)">

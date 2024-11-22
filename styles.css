@@ -36,11 +36,16 @@ body.dark-mode .container {
 
 #content-image {
     width: 100%;
-    object-fit: cover;
+    object-fit: contain; /* Ensure the image scales properly */
     border-radius: 8px;
-    transition: transform 1s ease, opacity 1s ease;
-    transform-origin: left center;
+    transition: transform 0.3s ease;
+    transform-origin: center; /* Set the zoom origin */
+    cursor: grab;
 }
+
+#content-image:active {
+    cursor: grabbing;
+  }
 
 .caption {
     font-size: 16px;
@@ -177,6 +182,11 @@ body.dark-mode .thumbnail:hover {
     }
 }
 
+.thumbnail.active {
+    border: 3px solid #007bff;
+    transform: scale(1.1);
+  }
+  
 /* Reverse Page Turn Animation */
 .page-turn-reverse {
     animation: flipPageReverse 1s forwards;
