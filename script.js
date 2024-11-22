@@ -116,28 +116,8 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
-let touchStartX = 0;
-
-contentImage.addEventListener('touchstart', (e) => {
-  touchStartX = e.touches[0].clientX;
-});
-
-contentImage.addEventListener('touchend', (e) => {
-  const touchEndX = e.changedTouches[0].clientX;
-  
-  if (touchStartX > touchEndX && currentPage < images.length - 1) {
-    currentPage++;
-    updatePage();
-  } else if (touchStartX < touchEndX && currentPage > 0) {
-    currentPage--;
-    updatePage();
-  }
-});
-
-function goToPage(index) {
-  currentPage = index;
-  updatePage();
-}
+// Removed swipe-to-turn functionality for mobile devices
+// Removed touchstart and touchend event listeners for swipe-based image navigation
 
 let scale = 1; // Current zoom scale
 let initialDistance = 0; // Initial distance between two fingers
@@ -220,6 +200,7 @@ contentImage.addEventListener('mouseup', () => {
 contentImage.addEventListener('mouseleave', () => {
   isDragging = false;
 });
+
 const lazyImages = document.querySelectorAll('.lazy');
 
 const lazyObserver = new IntersectionObserver((entries, observer) => {
@@ -247,4 +228,3 @@ function goToPage(index) {
 
 // Initial Page Load
 updatePage();
-
