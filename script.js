@@ -10,18 +10,18 @@ let currentPage = 0;
 let previousPage = currentPage;
 
 const images = [
-  { src: 'images/1.png', caption: 'Page 1 ' },
-  { src: 'images/2.png', caption: 'Page 2 ' },
-  { src: 'images/3.png', caption: 'Page 3 ' },
-  { src: 'images/4.png', caption: 'Page 4 ' },
-  { src: 'images/5.png', caption: 'Page 5 ' },
-  { src: 'images/6.png', caption: 'Page 6 ' },
-  { src: 'images/7.png', caption: 'Page 7 ' },
-  { src: 'images/8.png', caption: 'Page 8 ' },
-  { src: 'images/9.png', caption: 'Page 9 ' },
-  { src: 'images/10.png', caption: 'Page 10 ' },
-  { src: 'images/11.png', caption: 'Page 11 ' },
-  { src: 'images/12.png', caption: 'Page 12 ' },
+  { src: 'images/1.jpg', caption: 'Page 1 ' },
+  { src: 'images/2.jpg', caption: 'Page 2 ' },
+  { src: 'images/3.jpg', caption: 'Page 3 ' },
+  { src: 'images/4.jpg', caption: 'Page 4 ' },
+  { src: 'images/5.jpg', caption: 'Page 5 ' },
+  { src: 'images/6.jpg', caption: 'Page 6 ' },
+  { src: 'images/7.jpg', caption: 'Page 7 ' },
+  { src: 'images/8.jpg', caption: 'Page 8 ' },
+  { src: 'images/9.jpg', caption: 'Page 9 ' },
+  { src: 'images/10.jpg', caption: 'Page 10 ' },
+  { src: 'images/11.jpg', caption: 'Page 11 ' },
+  { src: 'images/12.jpg', caption: 'Page 12 ' },
 ];
 
 function updatePage() {
